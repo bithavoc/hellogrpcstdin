@@ -2,11 +2,11 @@
 
 ```
 go get github.com/bithavoc/hellogrpcstdin
-``
+```
 
 An example of GRPC Dialing with Stdin and Stdout of a child process.
 
-`greeter_server` launches `greeter_client` as a process and uses it's stdin and stdout to listen for GRPC requests.
+`greeter_server` launches `greeter_client` as a process and uses `os.Stdin` and `os.Stdout` to listen for GRPC requests.
 
 **Note:** You don't really need this library to implement GRPC plugins in Go, you can always use [hashicorp/go-plugin](https://github.com/hashicorp/go-plugin) which uses unix sockets.
 
